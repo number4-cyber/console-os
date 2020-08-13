@@ -2,14 +2,27 @@
 #include <unistd.h>
 using namespace std;
 
-
+/*The small functios */
+void banner();
+void loginpopup();
 void loginverify(string user , string passtext);
 
+/*This is the main from where i call my choosen functions*/
 int main (){
 
-  string username , password;
+  banner();
+  loginpopup();
+  
 
 
+
+
+  return 0;
+
+}
+
+/*The console banner*/
+void banner(){
   cout <<"\n\n";
   cout << "----------A CONSOLE COMPUTER----------" << "\n";
   cout << "[             $$$$$                  ]" << "\n";
@@ -23,6 +36,13 @@ int main (){
   cout << "[====================================]" << "\n";
   cout <<"\n\n";
 
+
+}
+
+/*The loginpop up function that brings the input for username and
+  password*/
+void loginpopup(){
+  string username , password;
   cout <<"USERNAME:";
   getline(cin, username);
   cout <<"\n";
@@ -31,12 +51,9 @@ int main (){
 
   loginverify(username, password);
 
-
-  return 0;
-
 }
 
-
+/*This is the login vrify method to check the pass and username*/
 
 void loginverify(string user, string passtext){
   if(user == "root" && passtext == "toor"){
