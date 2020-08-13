@@ -3,9 +3,17 @@ using namespace std;
 
 int main (){
 
-  cout << "Hello world" << "\n";
-
-  cout << "This is add" << "\n";
+  cout <<"\n\n";
+  cout << "----------A CONSOLE COMPUTER----------" << "\n";
+  cout << "[             $$$$$                  ]" << "\n";
+  cout << "[           $$   $$                  ]" << "\n";
+  cout << "[          $$    $$                  ]" << "\n";
+  cout << "[         $$     $$                  ]" << "\n";
+  cout << "[         $$$$$$$$$$$$$$$$           ]" << "\n";
+  cout << "[                $$                  ]" << "\n";
+  cout << "[                $$                  ]" << "\n";
+  cout << "[                $$                  ]" << "\n";
+  cout << "[====================================]" << "\n";
 
   return 0;
 
