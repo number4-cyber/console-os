@@ -1,4 +1,5 @@
 #include <iostream>
+#include <unistd.h>
 using namespace std;
 
 
@@ -38,5 +39,15 @@ int main (){
 
 
 void loginverify(string user, string passtext){
-  cout << user << passtext;
+  if(user == "root" && passtext == "toor"){
+    cout <<"Succesfully login"<<"\n";
+  }else {
+    system("color 4");
+    cout << "Wrong user name or password"<<"\n";
+    cout << "Try again";
+    usleep(499900);
+    system("cls");
+    system("color 7");
+    main();
+  }
 }
