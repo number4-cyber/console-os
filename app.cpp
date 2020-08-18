@@ -24,7 +24,8 @@ int main (){
   }else{
     cout << "::Logged in::"<<"\n";
     cout <<"\n";
-    cout <<"::Type Help For more information::";
+    cout <<"::Type Help For more information(case sensitive)::"<<"\n\n";
+    command();
   }
 
   return 0;
@@ -85,7 +86,13 @@ void loginverify(string user, string passtext){
 /*This is command section where all the commands will be processed*/
 void command(){
   string comin;
-  cout <<"YOUR COMMAND:> ";
+  cout <<"::YOUR COMMAND:> ";
   getline(cin, comin);
-  /*if()*/
+  if(comin == "Help"){
+    cout << "THIS IS HELP SECTION";
+    command();
+
+  }else {
+    cout << "No comand is entered";
+  }
 }
