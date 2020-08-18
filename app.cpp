@@ -87,5 +87,5 @@ void command(){
   string comin;
   cout <<"YOUR COMMAND:> ";
   getline(cin, comin);
-  if()
+  /*if()*/
 }
