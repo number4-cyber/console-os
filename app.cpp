@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unistd.h>
+#include <dos.h>
 using namespace std;
 
 /*The small functios */
@@ -83,15 +84,35 @@ void loginverify(string user, string passtext){
   }
 }
 
+//this is show date function.
+void showDate(){
+  struct date dt;
+  getdate(&dt);
+  cout <<"The Current date of your system is :[+]"<<"\n";
+  cout <<"%d/%d/%d" << dt.da_day << dt.da_mon << dt.da_year;
+}
+
 /*This is command section where all the commands will be processed*/
 void command(){
   string comin;
   cout <<"::YOUR COMMAND:> ";
   getline(cin, comin);
   if(comin == "Help"){
-    cout << "THIS IS HELP SECTION"<<"\n";
+    cout << "-----THIS IS HELP SECTION------"<<"\n";
     cout <<"--------------------------------"<<"\n";
-    cout <<
+    cout <<"--------------------------------"<<"\n";
+    cout <<"| application                  |"<<"\n";
+    cout <<"| date                         |"<<"\n";
+    cout <<"| id                           |"<<"\n";
+    cout <<"| network                      |"<<"\n";
+    cout <<"| time                         |"<<"\n";
+    cout <<"|                              |"<<"\n";
+    cout <<"|                              |"<<"\n";
+    cout <<"|                              |"<<"\n";
+    cout <<"|                              |"<<"\n";
+    cout <<"|                              |"<<"\n";
+    cout <<"--------------------------------"<<"\n";
+    cout <<"--------------------------------"<<"\n";
     command();
 
   } else if (comin == "time"){
@@ -99,6 +120,7 @@ void command(){
     command();
   } else if (comin == "date"){
     cout <<"this is date"<<"\n";
+    showDate();
     command();
   } else if (comin == "id"){
     cout << "this is ID"<<"\n";
