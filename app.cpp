@@ -89,10 +89,25 @@ void command(){
   cout <<"::YOUR COMMAND:> ";
   getline(cin, comin);
   if(comin == "Help"){
-    cout << "THIS IS HELP SECTION";
+    cout << "THIS IS HELP SECTION"<<"\n";
+    cout <<"--------------------------------"<<"\n";
+    cout <<
     command();
 
-  }else {
-    cout << "No comand is entered";
+  } else if (comin == "time"){
+    cout <<"this is time"<<"\n";
+    command();
+  } else if (comin == "date"){
+    cout <<"this is date"<<"\n";
+    command();
+  } else if (comin == "id"){
+    cout << "this is ID"<<"\n";
+    command();
+  } else if (comin == "application"){
+    cout << "this is application" <<"\n";
+    command();
+  } else if (comin == "network"){
+    cout << "this is network"<<"\n";
+    command();
   }
 }
